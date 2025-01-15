@@ -1,0 +1,23 @@
+apm-server:
+  host: "0.0.0.0:8200"
+  kibana:
+    enabled: true
+    host: kibana:5601
+    path: kibana
+    protocol: http
+    username: elastic
+    password: devpass
+
+logging:
+  level: warning
+  json: true
+
+output.elasticsearch:
+  hosts: ['http://elasticsearch:9200']
+  username: elastic
+  password: devpass
+
+setup.template.settings.index:
+  number_of_shards: 1
+  number_of_replicas: 0
+
